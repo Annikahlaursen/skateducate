@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skateducate</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Knewave&family=Signika:wght@300..700&display=swap" rel="stylesheet">  
+</head>
+<body>
+    <header>
+        <!-- navigationsbar - burger -->
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                <a href="#">Sessions</a>
+                <a href="frivillig.html">Camps</a>
+                <a href="arrangement.html">Projekter</a>
+                <a href="#">Om Os</a>
+                <a href="skate.html">FAQ</a>
+                <a href="#">Medlemskab</a>
+                </div>
+        </div>
+
+        <!-- Elementer i header - Logo og søgefunktion -->
+        <div class="header">
+          <div class="wordogmenu">
+            <h1 href="index.html" id="word">Skateducate</h1></a>
+            <a href="index.html" id="logo"><img src="img/slice3.png" alt="logo"></a>
+          </div> 
+            <span onclick="openNav()" id="menu">&#9776;</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Indhold -->
+        <article>
+          <img src="img/crew.jpg" alt="big photo, holdet" class="bigphoto">
+        </article>
+        <div style="padding-left:20px">
+            <h1>Skateboarding fællesskab i Aarhus</h1><br>
+            <p>Skateducate er en frivillig forening, der primært arbejder for at få flere kvinder, piger og non-binære til at blive en del af skateboardmiljøet. Vi har base i Aarhus i vores kære klubhus, Conny, som står på Institut for (X). Vi startede i 2014 og gennem årene har vi gradvist vokset os til et større crew af frivillige og blevet et velkendt syn i skateboardingmiljøet på tværs af landet. Vi brænder for skateboarding, fællesskabet og kulturen, der skaber drivkraften for vores initiativer til alverdens begivenheder og events. Det kan du finde ved at følge os på vores sociale medier, Facebook og Instagram – men du finder også fotos og videoer her på siden.</p><br>
+            <p>Vi brænder for disse initiativer, da vi rigtigt gerne vil videregive den glæde vi har fået i skatemiljøet. Vi gør det bl.a. gennem vores ugentlige tirsdags skatesessions, vores årlige skatecamp, diverse projekter og hvad end der blomster frem fra crew næste gang. Vores tilbud er rettet mod alle aldre, men vi er især populære for de 18-35 årige. Og ja du kan også sagtens være med! Det er for alle uanset niveau, begynder såvel som rutineret. Kom, join os!</p>
+          </div> 
+    </main>
+
+    <footer>
+        <!-- Sociale platforme -->
+        <div class="social">
+            <a href="https://www.facebook.com/radarlive/"></a><img src="img/fb.webp" alt="facebook logo"></a>
+            <a href="https://www.instagram.com/radarlive"></a><img src="img/ig.webp" alt="instagram logo"></a>
+            <a href="https://www.tiktok.com/tag/radarlive"></a><img src="img/tt.webp" alt="tiktok logo"></a>
+          </div>
+        <!-- Oplysninger -->
+            <section class="footertekst">
+              <ul>
+                  <li>Udarbejdet af: Annika Hecto Laursen</li><br>
+                  <li>Adresse:<br><a href="adresse">Karen Wegeners Gade 6,<br>8000 Aarhus</a></li><br>
+                  <li>Tlf.:<a href="telefonnummer"> +45 86 76 03 44</a></li>
+              </ul>
+            </section>
+    </footer>
+          <!-- navigationsbar, der får den til at fylde hele skærmen, når den foldes ud -->
+          <script>
+            function openNav() {
+              document.getElementById("myNav").style.width = "100%";
+            }
+                
+            function closeNav() {
+              document.getElementById("myNav").style.width = "0%";
+            }
+</script>
+
+</body>
+</html>

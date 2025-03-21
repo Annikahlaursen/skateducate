@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+/* farve galleri */
+:root {
+ --green: #5bb364;
+ --hvid: #fbfbbb;
+ --blue: #4474cb;
+ --red: #fb7474;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--hvid);
+  }
+
+  .abril-fatface-regular {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/* indstilling for header */
+.header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 17px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1); /* gradient - 3D effekt */
+    background-color: var(--green);
+    padding: 20px;
+    justify-content: space-around;
+  }
+
+/* icon formatering */
+#logo {
+    width: 70px;
+  }
+
+#word {
+    font-family: "Knewave", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    color: var(--hvid);
+  }
+
+.wordogmenu {
+    display: flex;
+    align-items: center;
+    width: 90%;
+  }
+
+/* burger menu */
+#menu {
+    font-size:70px;
+    cursor:pointer;
+  }
+
+.bigphoto {
+  margin-top: 5%;
+}
+
+/* overlay effekt, når menu åbnes */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: var(--hvid);
+    display: block;
+    transition: 0.3s;
+  }
+  
+/* effekt farve */
+.overlay a:hover, .overlay a:focus {
+    color: var(--lilla);
+  }
+  
+/* åben og lukke indstillinger */
+.overlay .closebtn {
+    position: absolute;
+    top: 23px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+/* sociale medier */
+.social {
+    width: 100%;
+    position: relative;
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+  }
+
+.social img {
+    width: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+footer {
+    margin-top: 8.3%;
+    background-color: var(--blue);
+    padding: 10px;
+    color: #ffff;
+  }
+
+  .footertekst {
+    display: flex;
+    padding: 3%;
+    font-size: 18px;
+    justify-content: center;
+    text-align: center;
+  }
+
+footer ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+
+footer a {
+  color: var(--deeplilla);
+}
+
+/* responsive */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+
+  /* styles for tablet devices */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+      width: 100%;
+    }
+  
+    .storbilled img {
+      width: 100%;
+    }
+  }
+  
+  /* styles for mobile devices */
+  @media only screen and (max-width: 767px) {
+    body {
+      font-size: 12px;
+      width: 100%;
+      margin: 0;
+    }
+  
+    #search {
+      display: none;
+    }
+  
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 20px;
+      align-items: center;
+    }
+
+    .social {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .social img {
+      width: 15%;
+    }
+  }
