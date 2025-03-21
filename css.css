@@ -16,6 +16,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--hvid);
+    line-height: 1.6;
   }
 
   .abril-fatface-regular {
@@ -23,6 +24,8 @@ body {
     font-weight: 400;
     font-style: normal;
   }
+
+
 
 /* indstilling for header */
 .header {
@@ -32,9 +35,10 @@ body {
     padding-top: 10px;
     padding-bottom: 17px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1); /* gradient - 3D effekt */
-    background-color: var(--green);
+    background-color: #5bb364e7;
     padding: 20px;
     justify-content: space-around;
+    z-index: 1000;
   }
 
 /* icon formatering */
@@ -63,7 +67,37 @@ body {
   }
 
 .bigphoto {
+  width: 100%;
   margin-top: 5%;
+}
+
+#tekstfelt {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.tekstcontainer {
+  display: block;
+  padding: 5%;
+}
+
+#abstrakt{
+  width: 50%;
+  justify-self: center;
+  align-self: center;
+}
+
+.container1 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.box {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px 0;
 }
 
 /* overlay effekt, når menu åbnes */
@@ -110,6 +144,20 @@ body {
     font-size: 60px;
   }
 
+  div.scroll-container {
+    background-color:var(--red);
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    margin-top: 5%;
+  }
+  
+  div.scroll-container img {
+    padding: 10px;
+    width: auto;
+    height: 500px;
+  }
+
 /* sociale medier */
 .social {
     width: 100%;
@@ -126,10 +174,10 @@ body {
   }
 
 footer {
-    margin-top: 8.3%;
+    margin-top: 5%;
     background-color: var(--blue);
-    padding: 10px;
     color: #ffff;
+    height: auto;
   }
 
   .footertekst {
