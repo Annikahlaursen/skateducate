@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skateducate</title>
+    <title>Skateducate - Et fællesskab for alle kønsminoriteter i Aarhus</title>
     <link rel="stylesheet" href="css.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,29 +16,29 @@
         <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <div class="overlay-content">
-                <a href="#">Sessions</a>
-                <a href="frivillig.html">Camps</a>
-                <a href="arrangement.html">Projekter</a>
-                <a href="#">Om Os</a>
-                <a href="skate.html">FAQ</a>
-                <a href="#">Medlemskab</a>
+                  <a href="session.html">Sessions</a>
+                  <a href="frivillig.html">Camps</a>
+                  <a href="arrangement.html">Projekter</a>
+                  <a href="omos.html">Om Os</a>
+                  <a href="skate.html">FAQ</a>
+                  <a href="#">Medlemskab</a>
                 </div>
         </div>
 
         <!-- Elementer i header - Logo og søgefunktion -->
-        <div class="header">
+        <div class="header" id="myHeader">
           <div class="wordogmenu">
             <h1 href="index.html" id="word">Skateducate</h1></a>
             <a href="index.html" id="logo"><img src="img/slice4.png" alt="logo"></a>
           </div> 
-            <span onclick="openNav()" id="menu">&#9776;</span>
+            <span onclick="openNav()" id="menu"><img src="img/menu.webp" alt="menuikon"></span>
         </div>
     </header>
 
     <main>
         <!-- Indhold -->
         <article>
-          <img src="img/conni2.jpg" alt="big photo, holdet" class="bigphoto">
+          <img src="img/kickflip.jpg" alt="big photo, holdet" class="bigphoto">
         </article>
         <article id="tekstfelt">
         <div class="tekstcontainer">
@@ -49,24 +49,25 @@
           <img src="img/abstrakt.png" alt="" id="abstrakt">
         </article>
 
+          <h2 id="events">Events! :D</h2>
           <div class="container1">
-            <h1>Animate On Scroll Eksempel</h1>
-            <div class="box" data-aos="fade-right">
-              <h2>Fade Up Animation</h2>
-              <p>Dette indhold vil fade op, når det kommer ind i viewporten.</p>
-            </div>
-            <div class="box" data-aos="fade-left">
-              <h2>Fade Down Animation</h2>
-              <p>Dette indhold vil fade ned, når det kommer ind i viewporten.</p>
-            </div>
-            <div class="box" data-aos="fade-right">
-              <h2>Fade Right Animation</h2>
-              <p>Dette indhold vil fade ind fra højre, når det kommer ind i viewporten.</p>
-            </div>
-            <div class="box" data-aos="fade-left">
-              <h2>Fade Left Animation</h2>
-              <p>Dette indhold vil fade ind fra venstre, når det kommer ind i viewporten.</p>
-            </div>
+            <section id="right">
+              <div class="box" data-aos="fade-right">
+              <img src="img/pms2025.JPG" alt="">
+              </div>
+              <div class="box" data-aos="fade-right">
+                <img src="img/grim24.jpg" alt="">
+              </div>
+            </section>
+
+            <section id="left">
+              <div class="box" data-aos="fade-left">
+                <img src="img/festival24.jpg" alt="">
+              </div>
+              <div class="box" data-aos="fade-left">
+                <img src="img/camp24.jpg" alt="">
+              </div>
+            </section>
           </div>
 
       <div class="scroll-container">
@@ -84,35 +85,24 @@
     </main>
 
     <footer>
-        <!-- Sociale platforme -->
-        <div class="social">
-            <a href="https://www.facebook.com/radarlive/"></a><img src="img/fb.webp" alt="facebook logo"></a>
-            <a href="https://www.instagram.com/radarlive"></a><img src="img/ig.webp" alt="instagram logo"></a>
-            <a href="https://www.tiktok.com/tag/radarlive"></a><img src="img/tiktok.webp" alt="tiktok logo"></a>
-          </div>
-        <!-- Oplysninger -->
-            <section class="footertekst">
-              <ul>
-                  <li>Udarbejdet af: Annika Hecto Laursen</li><br>
-                  <li>Adresse:<br><a href="adresse">Karen Wegeners Gade 6,<br>8000 Aarhus</a></li><br>
-                  <li>Tlf.:<a href="telefonnummer"> +45 86 76 03 44</a></li>
-              </ul>
-            </section>
+      <section>
+        <ul>
+          <h2>Mød os ved vores ugentlige tirsdags sessions!</h2>
+          <h3>Kontakt os på vores sociale medier - Facebook og Instagram</h3><br>
+          <li><a href="https://drive.google.com/file/d/0BxuIB77nnYInU3prbkdxczVsazg/view?usp=drive_link&resourcekey=0-s5g97645UihNS-n4Amot9w">Vedtægter</a></li><br>
+          <li>Tlf.:<a href="+4530502369">+45 30 50 23 69</a></li><br>
+          <li>Mail:<a href="mail">Info@skateducate.com</a></li><br>
+        </ul>
+        </section>
+    
+        <section class="social">
+        <ul>
+          <a href="http://skateducate.com/"></a><img src="img/fb.webp" alt="facebook logo"></a>
+          <a href="https://www.instagram.com/radarlive"></a><img src="img/ig.webp" alt="instagram logo"></a>
+        </ul>
+        </section>
     </footer>
-          <!-- navigationsbar, der får den til at fylde hele skærmen, når den foldes ud -->
-          <script>
-            function openNav() {
-              document.getElementById("myNav").style.width = "100%";
-            }
-                
-            function closeNav() {
-              document.getElementById("myNav").style.width = "0%";
-            }
-</script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
 
+    <script src="js.js"></script>
 </body>
 </html>

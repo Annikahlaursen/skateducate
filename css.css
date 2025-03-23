@@ -14,23 +14,15 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--hvid);
-    line-height: 1.6;
+  background-color: var(--hvid);
+  line-height: 1.6;
   }
-
-  .abril-fatface-regular {
-    font-family: "Abril Fatface", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-
 
 /* indstilling for header */
 .header {
     position: fixed;
     display: flex;
+    top: 0;
     width: 100%;
     padding-top: 10px;
     padding-bottom: 17px;
@@ -38,7 +30,8 @@ body {
     background-color: #5bb364e7;
     padding: 20px;
     justify-content: space-around;
-    z-index: 1000;
+    z-index: 1;
+    align-items: center;
   }
 
 /* icon formatering */
@@ -62,18 +55,70 @@ body {
 
 /* burger menu */
 #menu {
-    font-size:70px;
+    width: 35px;
     cursor:pointer;
+    margin: 20px;
   }
 
-.bigphoto {
+/* overlay effekt, når menu åbnes */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: #fb7474;
+  background-color: #fb7474d7;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 10%;
   width: 100%;
-  margin-top: 5%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 36px;
+  color: var(--hvid);
+  display: block;
+  transition: 0.3s;
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* effekt farve */
+.overlay a:hover, .overlay a:focus {
+  color: var(--green);
+}
+
+/* åben og lukke indstillinger */
+.overlay .closebtn {
+  position: absolute;
+  right: 45px;
+  font-size: 60px;
+}
+
+.bigphoto {
+  width: 80%;
+  display: flex;
+  justify-self: center;
+  margin-top: fit-content;
 }
 
 #tekstfelt {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
+  width: 80%;
+  justify-self: center;
+  margin-top: 33px;
 }
 
 .tekstcontainer {
@@ -88,9 +133,15 @@ body {
 }
 
 .container1 {
-  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  max-width: 70%;
   margin: 0 auto;
-  padding: 20px;
+}
+
+.container1 img {
+  width: 377px;
 }
 
 .box {
@@ -98,51 +149,17 @@ body {
   border: 1px solid #ddd;
   padding: 20px;
   margin: 20px 0;
+  max-width: fit-content;
 }
 
-/* overlay effekt, når menu åbnes */
-.overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-x: hidden;
-    transition: 0.5s;
-  }
-  
-.overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-  }
-
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: var(--hvid);
-    display: block;
-    transition: 0.3s;
-  }
-  
-/* effekt farve */
-.overlay a:hover, .overlay a:focus {
-    color: var(--lilla);
-  }
-  
-/* åben og lukke indstillinger */
-.overlay .closebtn {
-    position: absolute;
-    top: 23px;
-    right: 45px;
-    font-size: 60px;
-  }
+#events {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  justify-self: center;
+  font-size: 44px;
+  color: var(--blue);
+}
 
   div.scroll-container {
     background-color:var(--red);
@@ -158,44 +175,121 @@ body {
     height: 500px;
   }
 
-/* sociale medier */
-.social {
+/* Session */
+.session {
+  display: flex;
+  padding-top: 133px;
+  justify-items: center;
+  max-width: 35%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#session {
+  color: var(--blue);
+  text-align: center;
+  margin-bottom: 100px;
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#session h1 {
+  margin-top: 50px;
+}
+
+#session p {
+  margin-top: 20px;
+}
+
+#sesh {
+  display: grid;
+  padding-top: 33px;
+  justify-self: center;
+  align-self: center;
+  max-width: 70%;
+  gap: 20px;
+}
+
+.gods {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gods img {
+  height: 500px;
+}
+
+.ass {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.ass img {
+  height: 190px;
+}
+
+/* om os */
+.omos {
+  padding-top: 133px;
+  display: flex;
+  width: 70%;
+  justify-self: center;
+  text-align: center;
+}
+
+.omos h1 {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#tregrid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+  padding: 30px;
+}
+
+#tregrid img {
+  height: 222px;
+}
+
+
+  footer {
+    display: flex;
+    align-content: flex-end;
     width: 100%;
-    position: relative;
-    padding-top: 10%;
-    display: flex;
-    justify-content: center;
-  }
-
-.social img {
-    width: 5%;
-    margin-right: 5%;
-    margin-left: 5%;
-  }
-
-footer {
-    margin-top: 5%;
     background-color: var(--blue);
-    color: #ffff;
-    height: auto;
-  }
+    color: var(--hvid);
+    padding: 35px;
+    justify-content: space-between;
+    font-size: 13px;
+    flex-wrap: wrap-reverse;
+    text-transform: none;
+    align-items: center;
+    margin-top: 22px;
+}
 
-  .footertekst {
-    display: flex;
-    padding: 3%;
-    font-size: 18px;
-    justify-content: center;
-    text-align: center;
-  }
-
-footer ul {
+footer li {
     list-style-type: none;
-    padding: 10px;
     margin: 0;
+    font-size: 14px;
 }
 
 footer a {
-  color: var(--deeplilla);
+  color: var(--hvid);
+}
+
+/* sociale medier */
+.social ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-right: 22px;
+}
+
+.social img {
+  width: 56px;
 }
 
 /* responsive */
