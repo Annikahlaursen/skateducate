@@ -11,11 +11,14 @@
  --hvid: #fbfbbb;
  --blue: #4474cb;
  --red: #fb7474;
+
+ --noto: "noto sans", sans-serif;
 }
 
 body {
   background-color: var(--hvid);
   line-height: 1.6;
+  font-family: var(--noto);
   }
 
 /* indstilling for header */
@@ -107,6 +110,7 @@ body {
 }
 
 .bigphoto {
+  padding-top: 133px;
   width: 80%;
   display: flex;
   justify-self: center;
@@ -132,6 +136,7 @@ body {
   align-self: center;
 }
 
+/* fade grid */
 .container1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -144,9 +149,9 @@ body {
   width: 377px;
 }
 
-.box {
+.boks {
   background-color: #f4f4f4;
-  border: 1px solid #ddd;
+  border: 2px solid #e8e7e7;
   padding: 20px;
   margin: 20px 0;
   max-width: fit-content;
@@ -160,6 +165,8 @@ body {
   font-size: 44px;
   color: var(--blue);
 }
+
+/* galleri scroll */
 
   div.scroll-container {
     background-color:var(--red);
@@ -254,21 +261,173 @@ body {
   height: 222px;
 }
 
+/* Medlemskab */
+.tilmeld {
+  width: 70%;
+  justify-self: center;
+  text-align: center;
+}
 
-  footer {
+.tilmeld h1 {
+  margin-top: 33px;
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.form button {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 23px;
+  padding: 10px;
+  width: 333px;
+  background-color: #5bb364;
+  color: var(--hvid);
+  border: none;
+}
+
+.form button:hover {
+  background-color: var(--red);
+}
+
+/* */
+.faq {
+  margin-top: 133px;
+  width: 70%;
+  justify-self: center;
+  text-align: left;
+}
+
+.faq h1, .faq h2 {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.faq h1 {font-size:xx-large;}
+.faq h2 {font-size:x-large;}
+
+.faqimg {
+  display: flex;
+  justify-self: center;
+  margin-top: 33px;
+  width: 70%;
+  padding: 20px;
+  background-color: var(--red);
+}
+
+/* skate camps */
+.camp {
+  margin-top: 133px;
+  width: 70%;
+  justify-self: center;
+  text-align: center;
+}
+
+.camp h1 {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 33px;
+}
+
+.campsgrid {
+  margin-top: 22px;
+  display: grid;
+  justify-self: center;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}
+
+/* Container needed to position the button. Adjust the width as needed */
+.firkant {
+  justify-self: center;
+  position: relative;
+  width: 90%;
+}
+
+/* Make the image responsive */
+.firkant img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.firkant .btn {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: var(--blue);
+  color: var(--hvid);
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.firkant .btn:hover {
+  background-color: var(--red);
+}
+
+/* projekt */
+.projekt {
+  margin-top: 133px;
+  width: 100%;
+  justify-self: center;
+  text-align: center;
+}
+
+.projekt h1 {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 33px;
+}
+
+.projekt h2 {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 12px;
+}
+
+.projekt p {
+  width: 70%;
+  text-align: center;
+  justify-self: center;
+}
+
+
+  .footer {
+    font-family: var(--noto);
     display: flex;
-    align-content: flex-end;
+    justify-content: space-between;
     width: 100%;
     background-color: var(--blue);
     color: var(--hvid);
-    padding: 35px;
-    justify-content: space-between;
+    padding: 40px;
     font-size: 13px;
-    flex-wrap: wrap-reverse;
     text-transform: none;
     align-items: center;
-    margin-top: 22px;
+    margin-top: 33px;
+    gap: 60px;
 }
+
+.footer h2, .footer h3 {
+    font-family: "Knewave", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.footer h2 {font-size: x-large;}
+.footer h3 {font-size: large;}
 
 footer li {
     list-style-type: none;
@@ -280,16 +439,11 @@ footer a {
   color: var(--hvid);
 }
 
-/* sociale medier */
-.social ul {
+.social img {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-right: 22px;
-}
-
-.social img {
-  width: 56px;
+  width: 80px;
+  padding: 10px;
 }
 
 /* responsive */
