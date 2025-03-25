@@ -22,7 +22,7 @@ hoved.innerHTML = `
         <!-- Elementer i header - Logo og søgefunktion -->
         <div class="header" id="myHeader">
           <div class="wordogmenu">
-            <h1 href="index.html" id="word">Skateducate</h1></a>
+            <a href="index.html" id="word">Skateducate</a>
             <a href="index.html" id="logo"><img src="img/slice4.png" alt="logo"></a>
           </div> 
             <span onclick="openNav()" id="menu"><img src="img/menu.webp" alt="menuikon"></span>
@@ -44,8 +44,9 @@ fod.innerHTML += `
     
         <section class="social">
         <ul>
-          <a href="http://skateducate.com/"></a><img src="img/fb.webp" alt="facebook logo"></a>
-          <a href="https://www.instagram.com/radarlive"></a><img src="img/ig.webp" alt="instagram logo"></a>
+
+          <a href="https://www.facebook.com/Skateducate"><img src="img/fb.webp" alt="facebook logo"></a>
+          <a href="https://www.instagram.com/radarlive"><img src="img/ig.webp" alt="instagram logo"></a>
         </ul>
         </section>
 `

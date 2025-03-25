@@ -48,6 +48,7 @@ body {
     font-style: normal;
     font-size: 40px;
     color: var(--hvid);
+    text-decoration: none;
   }
 
 .wordogmenu {
@@ -109,12 +110,23 @@ body {
   font-size: 60px;
 }
 
+#forsideoverst {
+  padding-top: 166px;
+  text-align: center;
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  color: var(--blue); 
+}
+
 .bigphoto {
-  padding-top: 133px;
+  padding-top: 66px;
   width: 80%;
   display: flex;
   justify-self: center;
   margin-top: fit-content;
+  position: relative;
 }
 
 #tekstfelt {
@@ -123,6 +135,14 @@ body {
   width: 80%;
   justify-self: center;
   margin-top: 33px;
+}
+
+#tekstfelt h1 {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 33px;
+  color: var(--red);
 }
 
 .tekstcontainer {
@@ -150,8 +170,8 @@ body {
 }
 
 .boks {
-  background-color: #f4f4f4;
-  border: 2px solid #e8e7e7;
+  background-color: var(--green);
+  border: 2px solid #428248;
   padding: 20px;
   margin: 20px 0;
   max-width: fit-content;
@@ -236,7 +256,7 @@ body {
 
 /* om os */
 .omos {
-  padding-top: 133px;
+  margin-top: 166px;
   display: flex;
   width: 70%;
   justify-self: center;
@@ -263,6 +283,7 @@ body {
 
 /* Medlemskab */
 .tilmeld {
+  margin-top: 133px;
   width: 70%;
   justify-self: center;
   text-align: center;
@@ -293,7 +314,7 @@ body {
 
 /* */
 .faq {
-  margin-top: 133px;
+  margin-top: 166px;
   width: 70%;
   justify-self: center;
   text-align: left;
@@ -319,7 +340,7 @@ body {
 
 /* skate camps */
 .camp {
-  margin-top: 133px;
+  margin-top: 166px;
   width: 70%;
   justify-self: center;
   text-align: center;
@@ -378,7 +399,7 @@ body {
 
 /* projekt */
 .projekt {
-  margin-top: 133px;
+  margin-top: 166px;
   width: 100%;
   justify-self: center;
   text-align: center;
@@ -454,6 +475,11 @@ footer a {
     top: 15px;
     right: 35px;
     }
+
+    .header {
+      padding-top: 5px;
+      padding-bottom: 10px;
+    }
   }
 
   /* styles for tablet devices */
@@ -464,6 +490,11 @@ footer a {
   
     .storbilled img {
       width: 100%;
+    }
+
+    #tekstfelt, .container1, .gods, .ass, #tregrid, .campsgrid {
+      flex-direction: row;
+      flex-wrap: wrap;
     }
   }
   
