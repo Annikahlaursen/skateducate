@@ -1,79 +1,92 @@
+/* =====================
+   RESET & BASE STYLES
+===================== */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
 }
 
-/* farve galleri */
 :root {
- --green: #5bb364;
- --hvid: #fbfbbb;
- --blue: #4474cb;
- --red: #fb7474;
-
- --noto: "noto sans", sans-serif;
+  --green: #5bb364;
+  --hvid: #fbfbbb;
+  --blue: #4474cb;
+  --red: #fb7474;
+  --noto: "noto sans", sans-serif;
 }
 
 body {
   background-color: var(--hvid);
   line-height: 1.6;
   font-family: var(--noto);
-  }
+}
 
-/* indstilling for header */
+/* =====================
+   HEADER
+===================== */
 .header {
-    position: fixed;
-    display: flex;
-    top: 0;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 17px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1); /* gradient - 3D effekt */
-    background-color: #5bb364e7;
-    padding: 20px;
-    justify-content: space-around;
-    z-index: 1;
-    align-items: center;
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0 17px;
+  background-color: #5bb364e7;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
 
-/* icon formatering */
 #logo {
-    width: 70px;
-  }
+  width: 70px;
+}
+
+#word, 
+.overlay a, 
+#forsideoverst, 
+#tekstfelt h1, 
+#events, 
+#session, 
+.tilmeld h1, 
+.faq h1, .faq h2, 
+.camp h1, 
+.projekt h1, .projekt h2, 
+.footer h2, .footer h3 {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
 
 #word {
-    font-family: "Knewave", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 40px;
-    color: var(--hvid);
-    text-decoration: none;
-  }
+  font-size: 40px;
+  color: var(--hvid);
+  text-decoration: none;
+}
 
 .wordogmenu {
-    display: flex;
-    align-items: center;
-    width: 90%;
-  }
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
 
-/* burger menu */
 #menu {
-    width: 35px;
-    cursor:pointer;
-    margin: 20px;
-  }
+  width: 35px;
+  margin: 20px;
+  cursor: pointer;
+}
 
-/* overlay effekt, når menu åbnes */
+/* =====================
+   OVERLAY MENU
+===================== */
 .overlay {
-  height: 100%;
-  width: 0;
   position: fixed;
-  z-index: 3;
   top: 0;
   left: 0;
-  background-color: #fb7474;
+  height: 100%;
+  width: 0;
   background-color: #fb7474d7;
+  z-index: 3;
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -87,60 +100,52 @@ body {
 }
 
 .overlay a {
+  display: block;
   padding: 10px;
-  text-decoration: none;
   font-size: 36px;
   color: var(--hvid);
-  display: block;
+  text-decoration: none;
   transition: 0.3s;
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-style: normal;
 }
 
-/* effekt farve */
 .overlay a:hover, .overlay a:focus {
   color: var(--green);
 }
 
-/* åben og lukke indstillinger */
 .overlay .closebtn {
   position: absolute;
   right: 45px;
   font-size: 60px;
 }
 
+/* =====================
+   CONTENT SECTIONS
+===================== */
 #forsideoverst {
   padding-top: 166px;
   text-align: center;
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
   font-size: 20px;
-  font-style: normal;
-  color: var(--blue); 
+  color: var(--blue);
+}
+
+.bigphoto, #tekstfelt {
+  width: 80%;
+  justify-self: center;
 }
 
 .bigphoto {
   padding-top: 66px;
-  width: 80%;
   display: flex;
-  justify-self: center;
-  margin-top: fit-content;
   position: relative;
 }
 
 #tekstfelt {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  width: 80%;
-  justify-self: center;
   margin-top: 33px;
 }
 
 #tekstfelt h1 {
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-style: normal;
   font-size: 33px;
   color: var(--red);
 }
@@ -150,13 +155,13 @@ body {
   padding: 5%;
 }
 
-#abstrakt{
+#abstrakt {
   width: 50%;
   justify-self: center;
   align-self: center;
 }
 
-/* fade grid */
+/* GRID FADE */
 .container1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -178,83 +183,70 @@ body {
 }
 
 #events {
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  justify-self: center;
   font-size: 44px;
-  color: var(--blue);
+  justify-self: center;
 }
 
-/* galleri scroll */
+/* =====================
+   SCROLL GALLERY
+===================== */
+.scroll-container {
+  background-color: var(--red);
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+  margin-top: 5%;
+}
 
-  div.scroll-container {
-    background-color:var(--red);
-    overflow: auto;
-    white-space: nowrap;
-    padding: 10px;
-    margin-top: 5%;
-  }
-  
-  div.scroll-container img {
-    padding: 10px;
-    width: auto;
-    height: 500px;
-  }
+.scroll-container img {
+  padding: 10px;
+  height: 500px;
+}
 
-/* Session */
+/* =====================
+   SESSION
+===================== */
 .session {
   display: flex;
   padding-top: 133px;
-  justify-items: center;
   max-width: 35%;
   margin: 0 auto;
   text-align: center;
+  justify-items: center;
 }
 
 #session {
   color: var(--blue);
   text-align: center;
   margin-bottom: 100px;
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-style: normal;
 }
 
-#session h1 {
-  margin-top: 50px;
-}
-
-#session p {
-  margin-top: 20px;
-}
+#session h1 { margin-top: 50px; }
+#session p { margin-top: 20px; }
 
 #sesh {
   display: grid;
   padding-top: 33px;
+  max-width: 70%;
   justify-self: center;
   align-self: center;
-  max-width: 70%;
   gap: 20px;
 }
 
-.gods {
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.gods img {
-  height: 500px;
+.gods, .ass {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .ass {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.ass img {
-  height: 190px;
-}
+.gods img { height: 500px; }
+.ass img { height: 190px; }
 
-/* om os */
+/* =====================
+   ABOUT
+===================== */
 .omos {
   margin-top: 166px;
   display: flex;
@@ -263,25 +255,19 @@ body {
   text-align: center;
 }
 
-.omos h1 {
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
 #tregrid {
   display: grid;
   justify-content: center;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, auto);
   gap: 20px;
   padding: 30px;
 }
 
-#tregrid img {
-  height: 222px;
-}
+#tregrid img { height: 222px; }
 
-/* Medlemskab */
+/* =====================
+   MEMBERSHIP
+===================== */
 .tilmeld {
   margin-top: 133px;
   width: 70%;
@@ -289,17 +275,9 @@ body {
   text-align: center;
 }
 
-.tilmeld h1 {
-  margin-top: 33px;
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
+.tilmeld h1 { margin-top: 33px; }
 
 .form button {
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-style: normal;
   font-size: 23px;
   padding: 10px;
   width: 333px;
@@ -312,7 +290,9 @@ body {
   background-color: var(--red);
 }
 
-/* */
+/* =====================
+   FAQ
+===================== */
 .faq {
   margin-top: 166px;
   width: 70%;
@@ -320,14 +300,8 @@ body {
   text-align: left;
 }
 
-.faq h1, .faq h2 {
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.faq h1 {font-size:xx-large;}
-.faq h2 {font-size:x-large;}
+.faq h1 { font-size: xx-large; }
+.faq h2 { font-size: x-large; }
 
 .faqimg {
   display: flex;
@@ -338,7 +312,9 @@ body {
   background-color: var(--red);
 }
 
-/* skate camps */
+/* =====================
+   CAMPS
+===================== */
 .camp {
   margin-top: 166px;
   width: 70%;
@@ -346,44 +322,30 @@ body {
   text-align: center;
 }
 
-.camp h1 {
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 33px;
-}
-
 .campsgrid {
   margin-top: 22px;
   display: grid;
-  justify-self: center;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, auto);
   gap: 20px;
+  justify-self: center;
 }
 
-/* Container needed to position the button. Adjust the width as needed */
 .firkant {
-  justify-self: center;
   position: relative;
   width: 90%;
+  justify-self: center;
 }
 
-/* Make the image responsive */
 .firkant img {
   width: 100%;
   height: auto;
 }
 
-/* Style the button and place it in the middle of the container/image */
 .firkant .btn {
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-style: normal;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   background-color: var(--blue);
   color: var(--hvid);
   font-size: 16px;
@@ -397,26 +359,14 @@ body {
   background-color: var(--red);
 }
 
-/* projekt */
+/* =====================
+   PROJECTS
+===================== */
 .projekt {
   margin-top: 166px;
   width: 100%;
-  justify-self: center;
   text-align: center;
-}
-
-.projekt h1 {
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 33px;
-}
-
-.projekt h2 {
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  margin-bottom: 12px;
+  justify-self: center;
 }
 
 .projekt p {
@@ -425,35 +375,28 @@ body {
   justify-self: center;
 }
 
-
-  .footer {
-    font-family: var(--noto);
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background-color: var(--blue);
-    color: var(--hvid);
-    padding: 40px;
-    font-size: 13px;
-    text-transform: none;
-    align-items: center;
-    margin-top: 33px;
-    gap: 60px;
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+  background-color: var(--blue);
+  color: var(--hvid);
+  font-size: 13px;
+  margin-top: 33px;
+  gap: 60px;
+  font-family: var(--noto);
+  text-transform: none;
 }
-
-.footer h2, .footer h3 {
-    font-family: "Knewave", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.footer h2 {font-size: x-large;}
-.footer h3 {font-size: large;}
 
 footer li {
-    list-style-type: none;
-    margin: 0;
-    font-size: 14px;
+  list-style-type: none;
+  font-size: 14px;
+  margin: 0;
 }
 
 footer a {
@@ -467,18 +410,15 @@ footer a {
   padding: 10px;
 }
 
-/* responsive */
+/* =====================
+   MEDIA QUERIES
+===================== */
   @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
     .overlay .closebtn {
     font-size: 40px;
     top: 15px;
     right: 35px;
-    }
-
-    .header {
-      padding-top: 5px;
-      padding-bottom: 10px;
     }
   }
 
@@ -527,3 +467,23 @@ footer a {
       width: 15%;
     }
   }
+
+  /* Tablet (iPad) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gods { grid-template-columns: repeat(2, 1fr); }
+  .ass { grid-template-columns: repeat(2, 1fr); }
+  #tregrid { grid-template-columns: repeat(2, auto); }
+  .campsgrid { grid-template-columns: repeat(2, auto); }
+  .container1 { grid-template-columns: 1fr; }
+  #tekstfelt { grid-template-columns: 1fr; }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .gods { grid-template-columns: repeat(3, 1fr); }
+  .ass { grid-template-columns: repeat(4, 1fr); }
+  #tregrid { grid-template-columns: repeat(3, auto); }
+  .campsgrid { grid-template-columns: repeat(3, auto); }
+  .container1 { grid-template-columns: 1fr 1fr; }
+  #tekstfelt { grid-template-columns: 1.5fr 1fr; }
+}
