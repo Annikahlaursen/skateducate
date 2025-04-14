@@ -436,54 +436,61 @@ footer a {
       flex-direction: row;
       flex-wrap: wrap;
     }
+
+    .gods { grid-template-columns: repeat(3, 1fr); }
+    .ass { grid-template-columns: repeat(4, 1fr); }
+    #tregrid { grid-template-columns: repeat(3, auto); }
+    .campsgrid { grid-template-columns: repeat(3, auto); }
+    .container1 { grid-template-columns: 1fr 1fr; }
+    #tekstfelt { grid-template-columns: 1.5fr 1fr; }
   }
   
   /* styles for mobile devices */
   @media only screen and (max-width: 767px) {
-    body {
+    * {
+      max-width: 100%;
       font-size: 12px;
-      width: 100%;
       margin: 0;
+      text-align: center;
+      justify-content: center;
+      box-sizing: border-box;
     }
-  
-    #search {
-      display: none;
-    }
-  
+
+    #word {font-size: x-large;}
+
     .header {
-      display: flex;
+      width: 100%;
       justify-content: space-between;
-      padding-right: 20px;
-      align-items: center;
     }
 
-    .social {
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
+    .wordogmenu {
+      width: auto;
     }
 
-    .social img {
-      width: 15%;
+    #menu {right: 20px;}
+
+    #logo {width: 50px;}
+
+    main h1, main h2{
+      font-size: large !important;
+      text-align: center;
     }
+
+    .gods { grid-template-columns: repeat(2, 1fr); }
+    .ass { grid-template-columns: repeat(2, 1fr); }
+    #tregrid { grid-template-columns: repeat(2, auto); }
+    .campsgrid { grid-template-columns: repeat(2, auto); }
+    .container1 { grid-template-columns: 1fr; }
+    #tekstfelt { grid-template-columns: 1fr; }
+    .tekstcontainer {padding: 0px; padding-bottom: 20px;}
+    .bigphoto { padding-top: 25px; width: 90%;}
+
+    .footer {
+      flex-direction: row;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+    }
+
+    .footer h2 {font-size:large;}
+    .footer h3 {font-size: medium;}
   }
-
-  /* Tablet (iPad) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .gods { grid-template-columns: repeat(2, 1fr); }
-  .ass { grid-template-columns: repeat(2, 1fr); }
-  #tregrid { grid-template-columns: repeat(2, auto); }
-  .campsgrid { grid-template-columns: repeat(2, auto); }
-  .container1 { grid-template-columns: 1fr; }
-  #tekstfelt { grid-template-columns: 1fr; }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  .gods { grid-template-columns: repeat(3, 1fr); }
-  .ass { grid-template-columns: repeat(4, 1fr); }
-  #tregrid { grid-template-columns: repeat(3, auto); }
-  .campsgrid { grid-template-columns: repeat(3, auto); }
-  .container1 { grid-template-columns: 1fr 1fr; }
-  #tekstfelt { grid-template-columns: 1.5fr 1fr; }
-}
