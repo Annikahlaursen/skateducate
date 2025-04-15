@@ -53,8 +53,6 @@ p {
   z-index: 1;
 }
 
-main {justify-content: center; text-align: center;}
-
 #myHeader {
   width: 100%;
 }
@@ -464,8 +462,10 @@ footer a {
     main {
       top: -60px;
       font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      justify-content: center;
     }
 
     #myHeader {
