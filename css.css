@@ -486,6 +486,11 @@ footer a {
       padding-top: 30px;
     }
 
+  .faq {
+    text-align: center;
+    width: 80%;
+  }
+
     .gods { grid-template-columns: repeat(1, 1fr); }
     .ass { grid-template-columns: repeat(1, 1fr); }
     #tregrid { grid-template-columns: repeat(1, auto); justify-items: center;}
@@ -501,6 +506,22 @@ footer a {
       height: 333px;
       width: auto;
     }
+
+    .camp {
+      width: 100%;
+    }
+
+    .camp p {padding:30px; padding-top: 10px; padding-bottom: 10px;}
+
+    .omos {
+      width: 100%;
+    }
+
+    .omos p {padding:30px; padding-top: 10px; padding-bottom: 10px;}
+
+    .tilmeld {width: 100%;}
+
+    .tilmeldingtekst {padding:30px; padding-top: 0px;}
 
     #sesh {width: 333px; justify-items: center;}
 
