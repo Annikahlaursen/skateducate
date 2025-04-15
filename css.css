@@ -53,6 +53,8 @@ p {
   z-index: 1;
 }
 
+main {justify-content: center; text-align: center;}
+
 #myHeader {
   width: 100%;
 }
