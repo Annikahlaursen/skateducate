@@ -52,12 +52,13 @@ fod.innerHTML += `
 `
 
 // navigationsbar, der får den til at fylde hele skærmen, når den foldes ud -->
+
   function openNav() {
-    document.getElementById("myNav").style.width = "100%";
+    document.getElementById("myNav").style.height = "100%";
   }
       
   function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
+    document.getElementById("myNav").style.height = "0%";
   }
 
   AOS.init();
